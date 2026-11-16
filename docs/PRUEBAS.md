@@ -9,7 +9,7 @@ Hay dos formas de comprobar la aplicación:
 
 ```bash
 npm run dev          # terminal 1
-npm run probar       # terminal 2  (o: npm run probar -- https://tu-app.vercel.app)
+npm run probar       # terminal 2  (o: npm run probar -- https://propuesta-web2.vercel.app)
 ```
 
 ## Casos

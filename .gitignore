@@ -38,3 +38,6 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# configuración local del editor
+CLAUDE.md

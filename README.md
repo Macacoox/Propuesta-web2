@@ -2,7 +2,8 @@
 
 **Presupuesta mi web**: el cliente describe con sus palabras la web que necesita, la IA (OpenAI) propone servicios **solo del catálogo**, el usuario los revisa y el servidor calcula el presupuesto y genera un **PDF**.
 
-- Demo: _(enlace de Vercel)_
+- Demo: https://propuesta-web2.vercel.app/
+- Repositorio: https://github.com/Macacoox/Propuesta-web2
 - Stack: Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · `@react-pdf/renderer` · API de OpenAI
 
 ## Flujo
