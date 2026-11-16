@@ -1,6 +1,6 @@
 # Resultados de las pruebas automáticas
 
-- Fecha: 9/11/2026, 18:42:54
+- Fecha: 16/11/2026, 16:28:25
 - Servidor: http://localhost:3000
 - Resultado: **15/15 correctas**
 
@@ -10,7 +10,7 @@ así que los textos pueden variar entre ejecuciones.
 | | Caso | Detalle |
 |---|---|---|
 | ✅ | 1. Solicitud clara | HTTP 200 · servicios: web-basica, carta-menu, formulario-reservas, idioma-extra |
-| ✅ | 2. Solicitud ambigua | HTTP 200 · 2 dudas: ¿Qué tipo de negocio tiene Juan Pérez? / ¿Cuántas páginas adicionales necesita? |
+| ✅ | 2. Solicitud ambigua | HTTP 200 · 3 dudas: ¿Qué tipo de negocio tiene Juan Pérez? / ¿Cuántas páginas específicas necesita en su web? / ¿Qué funcionalidades adicionales le gustaría incluir en la web? |
 | ✅ | 3. Servicio que no ofrecemos | HTTP 200 · pendiente de valorar: Aplicación móvil nativa · ningún id inventado: true |
 | ✅ | 4. Descripción vacía | HTTP 400 · "La descripción del proyecto no puede estar vacía." |
 | ✅ | 4. Descripción solo espacios | HTTP 400 · "La descripción del proyecto no puede estar vacía." |
@@ -21,6 +21,6 @@ así que los textos pueden variar entre ejecuciones.
 | ✅ | 5. Fallo OpenAI (saturado) | HTTP 502 · "El servicio de IA está saturado o sin saldo. Espera un momento e inténtalo de nuevo." · reintentable: true |
 | ✅ | 5. Fallo OpenAI (clave) | HTTP 502 · "La clave de la API de OpenAI no es válida." · reintentable: false |
 | ✅ | 5. Reintento tras el fallo | HTTP 200 · 3 servicios |
-| ✅ | 6. Cálculo de la selección modificada | HTTP 200 · total 1367.3 € |
+| ✅ | 6. Cálculo de la selección modificada | HTTP 200 · total 1645.6 € |
 | ✅ | 6. PDF refleja la selección final | quitado "carta-menu", añadido "seo-basico" · en el PDF: web-basicax1,formulario-reservasx1,idioma-extrax1,seo-basicox1 |
-| ✅ | 6. PDF con importes del servidor | total PDF 1367.3 € = total calculado 1367.3 € (se enviaron precios falsos de 1 €) |
+| ✅ | 6. PDF con importes del servidor | total PDF 1645.6 € = total calculado 1645.6 € (se enviaron precios falsos de 1 €) |

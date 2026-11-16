@@ -1,7 +1,7 @@
-// Catálogo de servicios y tarifas.
-// ⚠️ Sustituye estos datos por el catálogo de vuestro ejercicio anterior.
+// Catálogo de servicios y tarifas de «Presupuesta mi web».
 // Es la ÚNICA fuente de verdad: la IA solo puede elegir estos IDs y
 // los precios se calculan siempre en el servidor a partir de aquí.
+// Precios en euros, sin IVA.
 
 export type Servicio = {
   id: string
@@ -15,78 +15,143 @@ export type Servicio = {
 }
 
 export const CATALOGO: Servicio[] = [
+  // --- Base del proyecto -------------------------------------------------
+  {
+    id: "landing-page",
+    nombre: "Landing page",
+    descripcion:
+      "Página única de presentación con secciones de scroll, llamada a la acción y formulario de contacto. Ideal para un producto, evento o profesional.",
+    tipo: "fijo",
+    precio: 390,
+  },
   {
     id: "web-basica",
-    nombre: "Web corporativa básica",
+    nombre: "Web corporativa",
     descripcion:
-      "Diseño responsive, hasta 5 secciones, formulario de contacto y alojamiento el primer año.",
+      "Diseño a medida y responsive con hasta 5 páginas (inicio, quiénes somos, servicios, galería y contacto), dominio y alojamiento el primer año.",
     tipo: "fijo",
-    precio: 600,
+    precio: 750,
   },
+  {
+    id: "tienda-online",
+    nombre: "Tienda online",
+    descripcion:
+      "Venta por internet: carrito de compra, pago con tarjeta y Bizum, gestión de pedidos, envíos y stock (hasta 100 productos). Incluye la web base.",
+    tipo: "fijo",
+    precio: 1490,
+  },
+
+  // --- Ampliaciones ------------------------------------------------------
   {
     id: "pagina-extra",
     nombre: "Página adicional",
-    descripcion: "Sección o página adicional con el mismo diseño de la web.",
+    descripcion:
+      "Página o sección extra con el mismo diseño de la web, maquetada con el contenido que aporte el cliente.",
     tipo: "por_unidad",
-    precio: 80,
+    precio: 95,
     unidad: "página",
   },
   {
     id: "idioma-extra",
     nombre: "Idioma adicional",
     descripcion:
-      "Versión del sitio en otro idioma con selector de idioma (traducción aportada por el cliente).",
+      "Versión completa del sitio en otro idioma con selector de idioma. La traducción de los textos la aporta el cliente.",
     tipo: "por_unidad",
-    precio: 150,
+    precio: 160,
     unidad: "idioma",
   },
   {
     id: "carta-menu",
-    nombre: "Carta / catálogo de productos",
+    nombre: "Carta / menú o escaparate de productos",
     descripcion:
-      "Sección con listado de productos o platos, categorías, precios y fotos, editable por el cliente.",
+      "Sección para MOSTRAR (sin vender online) platos o productos por categorías, con precios, alérgenos y fotos, editable por el cliente desde un panel.",
     tipo: "fijo",
-    precio: 250,
+    precio: 280,
   },
   {
     id: "formulario-reservas",
-    nombre: "Formulario de reservas",
+    nombre: "Sistema de reservas y citas",
     descripcion:
-      "Formulario de reservas con fecha, hora y número de personas, con aviso por correo electrónico.",
+      "Formulario para reservar mesa o pedir cita (fecha, hora y número de personas), con confirmación automática por correo al cliente y al negocio.",
     tipo: "fijo",
-    precio: 200,
+    precio: 240,
   },
   {
     id: "blog",
-    nombre: "Blog",
+    nombre: "Blog o sección de noticias",
     descripcion:
-      "Sección de noticias o blog con gestor de contenidos para publicar entradas.",
+      "Gestor de contenidos para publicar entradas con imágenes, categorías y botones para compartir en redes sociales.",
     tipo: "fijo",
-    precio: 300,
+    precio: 320,
   },
   {
-    id: "tienda-online",
-    nombre: "Tienda online",
+    id: "galeria",
+    nombre: "Galería de fotos y vídeos",
     descripcion:
-      "Carrito de compra, pasarela de pago y gestión de pedidos (hasta 50 productos).",
+      "Galería con filtros por categoría, vista ampliada y vídeos incrustados de YouTube o Vimeo.",
     tipo: "fijo",
-    precio: 1200,
+    precio: 150,
   },
+  {
+    id: "area-clientes",
+    nombre: "Área privada de clientes",
+    descripcion:
+      "Registro e inicio de sesión para que los clientes consulten sus datos, pedidos o documentos en una zona privada.",
+    tipo: "fijo",
+    precio: 450,
+  },
+  {
+    id: "integraciones",
+    nombre: "Integraciones básicas",
+    descripcion:
+      "Mapa de Google, botón de WhatsApp, enlaces e inserción de publicaciones de Instagram y Facebook.",
+    tipo: "fijo",
+    precio: 90,
+  },
+
+  // --- Contenido e imagen ------------------------------------------------
+  {
+    id: "logotipo",
+    nombre: "Diseño de logotipo",
+    descripcion:
+      "Logotipo con dos propuestas iniciales y hasta dos rondas de cambios, entregado en formatos para web e impresión.",
+    tipo: "fijo",
+    precio: 220,
+  },
+  {
+    id: "redaccion-textos",
+    nombre: "Redacción de textos",
+    descripcion:
+      "Redacción profesional de los textos de una página, orientada al público del negocio y a buscadores.",
+    tipo: "por_unidad",
+    precio: 60,
+    unidad: "página",
+  },
+
+  // --- Posicionamiento, legal y mantenimiento ----------------------------
   {
     id: "seo-basico",
     nombre: "SEO básico",
     descripcion:
-      "Optimización on-page, metaetiquetas, sitemap y alta en Google Search Console.",
+      "Optimización on-page, metaetiquetas, sitemap, alta en Google Search Console y ficha de Google Business Profile.",
     tipo: "fijo",
-    precio: 180,
+    precio: 210,
+  },
+  {
+    id: "legal-rgpd",
+    nombre: "Adaptación legal (RGPD y cookies)",
+    descripcion:
+      "Aviso legal, política de privacidad y de cookies, y banner de consentimiento configurado.",
+    tipo: "fijo",
+    precio: 120,
   },
   {
     id: "mantenimiento",
     nombre: "Mantenimiento mensual",
     descripcion:
-      "Actualizaciones, copias de seguridad y pequeños cambios de contenido.",
+      "Actualizaciones de seguridad, copias de seguridad semanales y hasta 1 hora al mes de cambios de contenido.",
     tipo: "por_unidad",
-    precio: 40,
+    precio: 45,
     unidad: "mes",
   },
 ]
