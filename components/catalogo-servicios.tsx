@@ -29,7 +29,7 @@ export function CatalogoServicios() {
           {CATALOGO.map((s, i) => (
             <li key={s.id}>
               <Aparecer retraso={(i % 3) * 60} className="h-full">
-                <article className="flex h-full flex-col gap-1 rounded-2xl border bg-card p-5">
+                <article className="flex h-full flex-col gap-1 rounded-2xl border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
                   <div className="flex items-baseline justify-between gap-3">
                     <h3 className="font-medium">{s.nombre}</h3>
                     <p className="shrink-0 font-semibold tabular-nums">

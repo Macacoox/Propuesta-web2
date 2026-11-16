@@ -144,3 +144,89 @@
     }
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Portada: fondo con brillo, rejilla y animaciones del hero           */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  --animate-flotar: flotar 7s ease-in-out infinite;
+  --animate-aurora: aurora 14s ease-in-out infinite alternate;
+  --animate-cursor: cursor 1s steps(1) infinite;
+  --animate-entrar: entrar 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-brillo: brillo 3s linear infinite;
+
+  @keyframes flotar {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes aurora {
+    0% {
+      transform: translate3d(-6%, -4%, 0) scale(1);
+    }
+    100% {
+      transform: translate3d(6%, 4%, 0) scale(1.12);
+    }
+  }
+  @keyframes cursor {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes entrar {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes brillo {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+@layer components {
+  .fondo-rejilla {
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      #000 40%,
+      transparent 100%
+    );
+  }
+  .texto-degradado {
+    background-image: linear-gradient(
+      90deg,
+      var(--primary),
+      #a855f7,
+      #ec4899,
+      var(--primary)
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flotar,
+  .animate-aurora,
+  .animate-brillo,
+  .animate-cursor {
+    animation: none;
+  }
+}
